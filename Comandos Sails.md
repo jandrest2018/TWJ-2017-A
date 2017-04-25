@@ -1,4 +1,5 @@
 #Comandos Sails
+![alt text](http://nodejsmongodb.com/images/sails.js-node-web-framework.jpg "Logo Title Text 1")
 
 [Ir aa documentacion 'Sails cli'](http://sailsjs.com/documentation/reference/command-line-interface)
 
