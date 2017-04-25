@@ -45,3 +45,10 @@ para utilizar docker con mysql vamos a utilizar el siguiente comando:
 ```
 >> docker run --name adrian -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_USER=adrian -e MYSQL_PASSWORD=123456 -p 3306:3306 -d mysql
 ```
+### --name adrian
+El nombre del contenedor
+
+### -e MYSQL_ROOT_PASSWORD=123456
+-e Le dice al docker quye es una variable de entorno
+la clave del usuario **root**
+
