@@ -43,7 +43,7 @@ Este comando **elimina** los o el contenedor que este **detenido**
 ##Mysql
 para utilizar docker con mysql vamos a utilizar el siguiente comando:
 ```
->> docker run --name adrian -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_USER=adrian -e MYSQL_PASSWORD=123456 -p 3306:3306 -d mysql
+>> docker run --name adrian -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=adrian -e MYSQL_USER=adrian -e MYSQL_PASSWORD=123456 -p 3306:3306 -d mysql
 ```
 ### --name adrian
 El nombre del contenedor
@@ -52,3 +52,15 @@ El nombre del contenedor
 -e Le dice al docker quye es una variable de entorno
 la clave del usuario **root**
 
+##Postgresql
+Para utilizar docker con Postgres vamos a utilizar el siguiente comando:
+```
+>> docker run --name postgresadrian -e POSTGRES_PASSWORD=123456 -e POSTGRES_USER=adrian -e POSTGRES_DB=politecnica -p 5432:5432 -d postgres
+```
+
+
+##MongoDB
+
+```
+docker run --name adrianmongo -p 27017:27017 -d mongo
+```
