@@ -40,14 +40,13 @@ module.exports.connections = {
   * Run: npm install sails-mysql                                             *
   *                                                                          *
   ***************************************************************************/
-  // someMysqlServer: {
-  //   adapter: 'sails-mysql',
-  //   host: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
-  //   user: 'YOUR_MYSQL_USER', //optional
-  //   password: 'YOUR_MYSQL_PASSWORD', //optional
-  //   database: 'YOUR_MYSQL_DB' //optional
-  // },
-
+   conexionMysqlServer: {
+     adapter: 'sails-mysql',
+     host: 'localhost',
+     user: 'adrian', //optional
+     password: '123456', //optional
+     database: 'adrian' //optional
+   },
   /***************************************************************************
   *                                                                          *
   * MongoDB is the leading NoSQL database.                                   *
@@ -56,14 +55,11 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  // someMongodbServer: {
-  //   adapter: 'sails-mongo',
-  //   host: 'localhost',
-  //   port: 27017,
-  //   user: 'username', //optional
-  //   password: 'password', //optional
-  //   database: 'your_mongo_db_name_here' //optional
-  // },
+   conexionMongoDbDocker: {
+     adapter: 'sails-mongo',
+     host: 'localhost',
+     port: 27017,
+   },
 
   /***************************************************************************
   *                                                                          *
@@ -74,13 +70,13 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  // somePostgresqlServer: {
-  //   adapter: 'sails-postgresql',
-  //   host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
-  //   user: 'YOUR_POSTGRES_USER', // optional
-  //   password: 'YOUR_POSTGRES_PASSWORD', // optional
-  //   database: 'YOUR_POSTGRES_DB' //optional
-  // }
+   conexcionPostgresqlDocker: {
+     adapter: 'sails-postgresql',
+     host: 'localhost',
+     user: 'adrian', // optional
+     password: '123456', // optional
+     database: 'politecnica' //optional
+   }
 
 
   /***************************************************************************
