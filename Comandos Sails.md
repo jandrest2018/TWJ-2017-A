@@ -1,20 +1,30 @@
-#Comandos Sails
+# Comandos Sails
+![Sails Logo](http://sailsjs.com/images/logo_sails.png)
 
-![alt text](http://nodejsmongodb.com/images/sails.js-node-web-framework.jpg "Logo Title Text 1")
+[Ir documentacion 'sails cli'](http://sailsjs.com/documentation/reference/command-line-interface)
 
-[Ir aa documentacion 'Sails cli'](http://sailsjs.com/documentation/reference/command-line-interface)
+## sails new
 
-##Sails new
-El comando **new** nos ayuda a crear un nuevo proyecto de **sails**
+El comando **new** nos ayuda a crear un nuevo proyecto de **sails**.
 ```
->> sails new Aplication
+>> sails new Aplicacion
 ```
-Donde **Aplciaction** es el nombre de la carpeta y de la aplicacion que vamos a crear.
+Donde **Aplicacion** es el nombre de la carpeta y de la aplicacion que vamos a crear.
 
-##sails list
-El comando **lift** utilizado para levantar un proyecto de sails en el directorio actual.
+
+## sails lift
+
 ```
 >> sails lift
 ```
-- Debemos esta **dentro de la carpeta** del proyecto de sails
-- Sails nos pregunta algunas opciones, vamos a escoger por defecto la **opcion 2**
+
+- Debemos de estar **dentro de la carpeta** del proyecto de sails
+
+
+## sails generate api
+
+```
+>> sails generate api <nombreModelo>
+```
+
+- Debemos de estar **dentro de la carpeta** del proyecto de sails

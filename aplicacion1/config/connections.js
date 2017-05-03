@@ -40,13 +40,14 @@ module.exports.connections = {
   * Run: npm install sails-mysql                                             *
   *                                                                          *
   ***************************************************************************/
-   conexionMysqlServer: {
+   conexionMysqlDocker: {
      adapter: 'sails-mysql',
      host: 'localhost',
      user: 'adrian', //optional
      password: '123456', //optional
      database: 'adrian' //optional
    },
+
   /***************************************************************************
   *                                                                          *
   * MongoDB is the leading NoSQL database.                                   *
@@ -55,10 +56,10 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-   conexionMongoDbDocker: {
+  conexionMongoDbDocker: {
      adapter: 'sails-mongo',
      host: 'localhost',
-     port: 27017,
+     port: 27017
    },
 
   /***************************************************************************
@@ -70,7 +71,7 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-   conexcionPostgresqlDocker: {
+  conexionPostgresqlDocker: {
      adapter: 'sails-postgresql',
      host: 'localhost',
      user: 'adrian', // optional

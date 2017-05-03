@@ -1,5 +1,5 @@
 {
-  "name": "aplicacion1",
+  "name": "Aplicacion1",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -21,7 +21,7 @@
     "include-all": "^1.0.0",
     "rc": "1.0.1",
     "sails": "~0.12.13",
-    "sails-disk": "^0.10.10",
+    "sails-disk": "~0.10.9",
     "sails-mongo": "^0.12.2",
     "sails-mysql": "^0.11.5",
     "sails-postgresql": "^0.11.4"
@@ -33,7 +33,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/USRDEL/aplicacion1.git"
+    "url": "git://github.com/USRDEL/Aplicacion1.git"
   },
   "author": "USRDEL",
   "license": ""
