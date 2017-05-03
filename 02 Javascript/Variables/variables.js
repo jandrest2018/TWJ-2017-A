@@ -42,13 +42,85 @@ console.log(typeof numero2)
 // OBJETOS JSON
 var adrian = {
         id:1,
-        nombre: 'Adrian',
-        createdAt: new Date(),
-        updatedAt: new Date()
-        casado: true,
-        prestamos: false,
-        hijos: null,
+        nombre:'Adrian',
+        createdAt:new Date(),
+        updatedAt:new Date()
+        prestamos:false,
+        casado:true,
         altura:1.78,
-        negartivo: -1
+        hijos:null,
+        negativo:-1,
+        mascota:{
+            nombre:'cachetes',
+                fechaNacimiento:new Date()
+        }
 };
 console.log(adrian+"Hola")
+console.log(adrian.altura);
+console.log(adrian.mascota.fechaNacimiento);
+
+console.log('Altura:', adrian.altura);
+adrian.altura = 1.48;
+console.log('Altura:',adrian.altura);
+
+adrian.altura = {
+    ancho:2.4,
+    alto:1.79
+};
+
+console.log('Altura', adrian.altura);
+
+//Borrando atributos o propiedades del objeto
+delete adrian.altura; //para borrar el parametro altura del objeto adrian
+console.log('Objeto', adrian);
+
+//añadir atributos
+adrian.juegos = 'varios'; //para añadir parametros o atributos o propiedades al objeto adrian
+
+//ARREGLOS
+var arreglo = [1,
+'adr',
+2.4,
+false,
+true,
+null,
+undefined,
+new Date(),
+-3421,
+    {
+        a:'b'
+    }];
+
+console.log(arreglo.true);
+
+var nuevoOnjeto = {
+    papas:['chola','chaucha','maria'],
+    cebollas:['paiteña','perla','blanca']
+}
+console.log(nuevoOnjeto.papas.[1]); //me muestra el elemento chaucha del arreglo papas
+
+
+var matriz = [[0,1],[2,3]];
+console.log(matriz[0][0])
+
+var arregloDeObjetos = [
+    id:1,
+    nombre:'Adrian'
+},
+    {
+    id:2,
+        nombre:'Felipe'
+    }
+];
+
+//splice(delimita la posicion en la que vamos a trabjar, numero de objetos a eliminarse)
+console.log('Antes',arregloDeObjetos);
+arregloDeObjetos.slice(0,1);//borar adrian y dejar a felipe
+console.log('Despues',arregloDeObjetos);
+
+arrregloDeObjetos.splice(0,0,{id:3,nombre:'Carmen'})//añadir a carmen antes que felipe
+console.log('Despues2:',arrregloDeObjetos)
+
+
+
+
