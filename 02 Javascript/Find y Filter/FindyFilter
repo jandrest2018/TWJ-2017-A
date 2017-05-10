@@ -1,0 +1,20 @@
+//foreach
+//operadores
+//find y filter
+//cuando divido para valor/5 obtengo la nota sobre 2 puntos
+//find no devuelve arregleos, devuelve el valor que esta dentro del arreglo o undefined cuando no encuentra anda
+
+let arreglo = [10,3,8,5,9,7,6];
+
+let nostasSupletorio =arreglo.filter((valor,indice)=>{
+        return valor/5;
+})
+.filter((valor)=>{
+    return valor<=1
+})
+.find((valor)=>{
+    return valor = 1.6
+})
+console.log(notasSupletorio);
+
+//find
