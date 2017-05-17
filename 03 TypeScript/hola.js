@@ -39,7 +39,22 @@ var Persona = (function () {
     }
     Persona.prototype.imprimirPersona = function () {
         console.log(this.nombre, this.apellido, this.fechaNacimiento);
+        return {
+            nombre: this.nombre,
+            apellido: this.apellido
+        };
+    };
+    Persona.prototype.imprimirNombre = function (nombre, apellido) {
+        if (apellido) {
+            console.log(nombre, apellido);
+        }
+        else {
+            console.log(nombre);
+        }
     };
     return Persona;
 }());
 var andres = new Persona(); //instanciamos la clase persona
+function SumarNumeros(numero1, numero2) {
+    return numero1 + numero2;
+}
