@@ -2,25 +2,23 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'twj-raiz',
-  template: `
-    <h1>Hola</h1>
-
-  `,
+  templateUrl: "./app.component.html" ,
   styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
   usuario:UsuarioInt = {
-    nombre:"Andres",
-    apellido:"Tinajero"
+    nombre:"Adrian",
+    apellido:"Eguez"
   }
 
   constructor(){
     console.log("Constructor");
     this.holaMundo();
-    this.saludar(this.usuario.nombre,
-      this.usuario.apellido
-    );
+    console.log(
+      this.saludar(this.usuario.nombre,
+        this.usuario.apellido
+      ));
   }
 
   holaMundo(){
@@ -32,6 +30,9 @@ export class AppComponent {
   }
 
 }
+
+
+
 
 interface UsuarioInt{
   nombre:string,
