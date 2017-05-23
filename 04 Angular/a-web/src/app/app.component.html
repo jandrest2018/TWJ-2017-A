@@ -1,5 +1,18 @@
 <h1>Mi primer aplicacion en Angular</h1>
 
 <p>Gracias por visitarnos</p>
+<h2>Property Binding</h2>
+<p>Mantiene sincronizadas las variables del componente en el HTML</p>
+<h3>Primera forma con llaves dobles {}</h3>
+<p>{{parrafo}}</p>
+<h3>Segunda forma con []</h3>
+<p [innerText]="parrafo"></p>
 
-<h3>Desarrollado por {{usuario.nombre}}</h3>
+
+<p [style.color="white"]
+   [style.background-color]="background"
+   [innerText]="parrafo"></p>
+
+<input type="text" [value]="parrafo">
+
+<h4>Desarrollado por {{usuario.nombre}}</h4>
