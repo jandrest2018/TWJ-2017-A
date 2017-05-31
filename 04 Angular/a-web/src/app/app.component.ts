@@ -1,23 +1,3 @@
-function cambiarNombre():void{
-  console.log("Rafico a Lenin")
-}
-
-function cambiarOtroNombre():void{
-  this.nombre="Lenin a Rafico";
-}
-
-function cambiarNombreInput(nombreEtiqueta){
-  console.log(nombreEtiqueta.value);
-  console.log(nombreEtiqueta.type);
-  console.log(nombreEtiqueta.placeholder);
-
-  this.nombreEtiqueta.value;
-
-}
-
-
-
-/*
 import { Component } from '@angular/core';
 
 @Component({
@@ -70,4 +50,4 @@ interface UsuarioInt{
   nombre:string,
   apellido:string
 }
-*/
+
