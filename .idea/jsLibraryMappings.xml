@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <excludedPredefinedLibrary name="TWJ-2017-A/04 Angular/DEBER-Web/node_modules" />
+  </component>
+</project>

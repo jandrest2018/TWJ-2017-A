@@ -1,9 +1,39 @@
+
 <div class="container">
 
-  <h1>PLANETAS DE STAR WARS</h1>
-  <a title="Star Wars" href=""><img src="http://nosologamer.com/wp-content/uploads/2016/11/star-wars-logo_k6qf.jpg" alt="" /></a>
-  <br>
-  <br>
+  <h1>Bienvenidos</h1>
+
+  <h2>Usuarios</h2>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+
+        <!-- | = option + 2 MAC = alt+124 -->
+        <pre>
+          {{ nuevoUsuario | json }}
+        </pre>
+
+
+        <label class="col-form-label">Nombre Usuario:
+        </label>
+          <input class="form-control"
+                 placeholder="Ingrese nuevo Nombre"
+                 [(ngModel)]="nuevoUsuario.nombre" type="text">
+      </div>
+
+      <button class="btn btn-success"
+              (click)="crearUsuario()">
+        Crear usuario
+      </button>
+
+    </div>
+  </div>
+
+
+
+  <h2>Planetas</h2>
+
   <button class="btn btn-outline-success" (click)="cargarPlanetas()">Cargar Planetas</button>
 
   <div class="row">
@@ -18,9 +48,9 @@
   </div>
 
 
-
-
 <!--
+
+
 
   <h2>Usuarios Conectados</h2>
 
@@ -30,7 +60,7 @@
       <div class="col-sm-4" *ngIf="usuario.conectado">
         <div class="card" style="width: 20rem;">
           <div class="card-block">
-            <h4  class="ccreateditle">{{usuario.nombre}} - {{usuario.conectado}}</h4>
+            <h4  class="card-title">{{usuario.nombre}} - {{usuario.conectado}}</h4>
             <p class="card-text">{{usuario.nombre}} + {{usuario.apellido}}</p>
             <a href="#" class="btn btn-primary btn-block">Ir a Perfil</a>
           </div>
@@ -77,6 +107,8 @@
 
 
 
+
+
 </div>
 
 
@@ -117,6 +149,8 @@
     ROJO
   </div>
 
+
+
   <div style="background-color:blue;"
        class="col-md-4">
     AZUL
@@ -129,6 +163,8 @@
        class="col-md-4">
     AZUL
   </div>
+
+
 
 
   <div style="background-color:yellow;"

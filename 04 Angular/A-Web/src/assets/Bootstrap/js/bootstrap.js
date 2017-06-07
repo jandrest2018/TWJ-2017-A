@@ -3095,7 +3095,7 @@ var Tooltip = function ($) {
     };
 
     Tooltip.prototype.getTitle = function getTitle() {
-      var title = this.element.getAttribute('data-original-created');
+      var title = this.element.getAttribute('data-original-title');
 
       if (!title) {
         title = typeof this.config.title === 'function' ? this.config.title.call(this.element) : this.config.title;
