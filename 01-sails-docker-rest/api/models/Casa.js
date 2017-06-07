@@ -7,7 +7,10 @@
 
 module.exports = {
 
+
+
   connection: 'conexionMysqlDocker',
+
 
   attributes: {
 
