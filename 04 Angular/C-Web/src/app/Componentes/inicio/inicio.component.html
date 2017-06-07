@@ -306,16 +306,14 @@ Primera fila--
 -->
 <div class="container">
   <br>
-  <h1>Bienvenidos</h1>
+  <h1>PLANETAS STAR WARS</h1>
   <button class="btn btn-outline-success" (click)="cargarPlanetas()"><<br><br>CARGAR PLANETAS
   </button>
   <div class="row">
     <div class="col-sm-4" *ngFor = "let planeta of planetas; let i=index">
      {{planeta.name}}
       <app-planeta-star-wars [planeta]="planeta">
-
       </app-planeta-star-wars>
-
     </div>
   </div>
 

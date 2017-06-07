@@ -1,0 +1,175 @@
+<div class="container">
+  <h1 class="display-2">Bienvenidos</h1>
+  <a title="Star Wars" href=""><img src="http://nosologamer.com/wp-content/uploads/2016/11/star-wars-logo_k6qf.jpg" alt="" /></a>
+</div>
+<div class="row">
+  <div style="align-content: center" class="col-md-6">
+    <br>
+    <button (click)="cargarPlanetas()" class="btn btn-success">Planetas de Star Wars</button>
+  </div>
+</div>
+<div class="card">
+  <ul>
+    <li *ngFor="let planet of planetas" >{{planet.name}}</li>
+  </ul>
+</div>
+<div class="container">
+  <div class="card-block">
+      <div class="row">
+          <div class="col-sm-4" *ngFor="let planet of planetas; let i= index">
+            <app-planeta-star-wars [planeta]="planet" ></app-planeta-star-wars>
+            <img src="">
+          </div>
+        </div>
+  </div>
+</div>
+
+
+
+
+<!--<div class="container">
+  <div class="planet
+nameor="let pelisplanetasulas">
+  <div cnameol-sm-4">
+    <div class="card card-inverse text-center">
+
+      &lt;!&ndasplaplanete &ndagravity  <img class="card-img-top" style="max-height: 70%; max-width:created [src]="'https://imaplanetplanetg/t/p/w1terrainster_path" alt="Photo of sunset">
+
+      &lt;!&ndash; Text Overlay &ndash;&gt;
+      planetclass=planet-block">residentslass="table table-inverse table-bordered">
+          <tbody>
+          <planet           <tplanetease date:</td>
+            <td>{{pelis.release_date}}</td>
+          </tr>
+       planetr>
+      planet <td>Original title:</td>
+            <td>{{pelis.original_title}}</td>
+          </tr>
+          <tr>
+planet      clplanetginal Language:</td>
+            <td>{{pelis.original_language}}</td>
+          </tr>
+          <tr>
+            <td>Popularity:</td>
+            <td>{{pelis.poplanetity}}</tplanet    films
+          <tr>
+            <td>Vote count:</td>
+            <td>{{pelis.vote_count}}</td>
+          </tr>
+          <tr>
+            <td>Overview:</td>
+            <td>
+              <p>{{pelis.overview}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td>Generos:</td>
+            <td>
+              <ul>
+                <li *ngFor="let generos of pelis.genre_ids">{{generos}}</li>
+              </ul>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+</div>
+</div>-->
+<!--<div>
+  <ul>
+    <li *ngFor="let usuario of arregloUsr">{{usuario.nombre}}</li>
+  </ul>
+
+</div>
+<div>
+  <p *ngIf="undefined">Este es verdadero 1</p>
+  <p *ngIf="null">Este es falso 1</p>
+</div>
+
+<div>
+  <p *ngIf="(2+2)==4">Este es verdadero 2</p>
+  <p *ngIf="(2+2)!=4">Este es falso 2</p>
+</div>
+
+<div>
+  <p *ngIf="0">Este es verdadero 3</p>
+  <p *ngIf="nombre">Este es falso 3</p>
+</div>-->
+
+<!--<div class="container">
+  <input type="text" class="align-self-sm-auto" [value]="nombre" #nombreEtiqueta>
+  {{nombre}}
+  <br>
+  <button class="btn-danger" (blur)="otroNombre()">Blurcito</button>
+  <button class="btn-lg" (click)="cambiarNombre()" >Cambiar valor</button>
+  <h1 (click)="otroNombre()" >Este solo es un header</h1>
+  <button (click)="cambiarInput(nombreEtiqueta)" class="btn-secondary">CAMBIAME</button>
+  <input type="text" placeholder="ESCRIBE ALGO MALDITO" class="form-control" [(ngModel)]="nombre">
+  <div class="container-fluid"><img style="height: 100%; width: 100%" [src]="nombre" alt=""></div>
+
+</div>-->
+
+<!--
+<h1>Titulo</h1>
+<p>Un parrafito lalalallalala</p>
+
+<div class="row">
+  <div style="background-color: rebeccapurple" class="col-sm-6">una filita</div>
+  <div style="background-color: rebeccapurple" class="col-sm-6">una filita</div>
+  <div style="background-color: #3c763d"
+    class="col-lg-7">otra </div>
+  <div style="background-color: #3c763d"
+       class="col-lg-5">otra </div>
+  <div style="background-color: #31b0d5"
+    class="col-md-10">otra </div>
+  <div style="background-color: #31b0d5"
+       class="col-md-2">otra </div>
+  <div style="background-color: deeppink"
+    class="col-xl-9">otra filita</div>
+  <div style="background-color: deeppink"
+       class="col-xl-3">otra filita</div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-sm-2">Un menusito</div>
+      <div class="col-sm-2">Un menusito</div>
+      <div class="col-sm-2">Un menusito</div>
+      <div class="col-sm-2">Un menusito</div>
+      <div class="col-sm-2">un menusito</div>
+      <div class="col-sm-2">un menusito</div>
+    </div>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+
+<div style="height: 500px; background-color: rebeccapurple; align-content: center" class="container">
+  <p style="border-top: 30%; border-left: 40%; border-right: 40%; align-content: center; color: #ffffff; padding: 8%" class="lead">Bootstrap is the most popular HTML, CSS, and JS framework in the world for building responsive, mobile-first projects on the web.</p>
+  <button style="align-self: center" class="btn">Un botoncito</button>
+</div>
+
+<div class="row">
+  <div style="height: 100px" class="container"></div>
+</div>
+<div class="row">
+  <div class="col-xl-12"><h2 style="text-align: center">Un titulito</h2></div>
+</div>
+<div class="row">
+  <div style="text-align: center" class="col-xl-12"><p class="lead">Este es un parrafito de la paginita lallalalalalal lead</p></div>
+</div>
+<div class="row">
+  <div style="text-align: center" class="col-md-6"><p>
+    Este es un parrafito lalalallalalallalalallala
+  </p></div>
+  <div style="text-align: center" class="col-md-6"><p>
+    Este es otro parrafito miaw miaw
+  </p></div>
+</div>
+-->

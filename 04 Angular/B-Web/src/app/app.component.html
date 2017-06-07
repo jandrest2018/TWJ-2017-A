@@ -1,0 +1,23 @@
+<!--<h1>
+  {{title}}
+  {{noroot}}
+</h1>-->
+<h2>Esto no esta en un selector</h2>
+<p>este es un peque parrafito <b>ESTO ESTA EN NEGRITAS</b></p>
+<h3>Habia una vez un usuario llamado {{saludar(usuario.nombre, usuario.apellido)}}</h3>
+
+<p>El Property binding es aquello que mantiene unidas la propiedad de un componente y su interfaz es decir las variables del componente con el html</p>
+<p>1. con llaves</p>
+<p id="bind">{{parrafo}}</p>
+<p>2. con corchetes</p>
+<p [style.color]="'green'" [style.background-color]="background" [innerText]="parrafo"></p>
+
+<input type="text" [value]="parrafo"/>
+
+<app-estilo></app-estilo>
+<app-estilo></app-estilo>
+<app-estilo></app-estilo>
+
+<a [href]="url">
+  <img [src]="url2">
+</a>
