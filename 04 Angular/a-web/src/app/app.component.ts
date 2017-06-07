@@ -9,28 +9,33 @@ import { Component } from '@angular/core';
 export class AppComponent {
   usuario:UsuarioInt = {
     nombre:"",
-    apellido:"Tinajero"
-  }
+    apellido:"Eguez"
+  };
+  parrafo:string = "";
+  background:string = "blue";
+
+  url:string="https://angular.io";
+  src:string="https://angular.io/resources/images/logos/angular/angular.png"
+
+
+
 
   constructor(){
-    this.usuario.nombre = "Andres";
-    setTimeout(()=>{
-      this.usuario.nombre = "Jose"
-    },3000);
-  }
+    this.usuario.nombre = "Adrian";
+    this.parrafo = "Mi mama me mima";
 
-  /*constructor(){
-    console.log("Constructor");
-    this.holaMundo();
-    console.log(
-      this.saludar(this.usuario.nombre,
-        this.usuario.apellido
-      ));
+    setTimeout(()=>{
+      this.usuario.nombre = "Vicente"
+
+    },3000);
   }
 
   holaMundo(){
     console.log("Hola mundo");
-  }*/
+  }
+
+
+
   saludar(nombre:string,
           apellido?:string):string{
     return `Hola ${nombre} ${apellido}`;
@@ -38,7 +43,11 @@ export class AppComponent {
 
 }
 
+
+
+
 interface UsuarioInt{
   nombre:string,
   apellido:string
 }
+

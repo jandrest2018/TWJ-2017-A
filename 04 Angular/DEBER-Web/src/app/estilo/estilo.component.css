@@ -1,0 +1,16 @@
+p{
+  border: 100px;
+  border-color: aquamarine;
+  color: brown;
+}
+h1{
+  color: #118798;
+}
+
+.unaclase{
+  font-size: large;
+  color: blueviolet;
+}
+p:hover{
+  background-color: chartreuse;
+}
