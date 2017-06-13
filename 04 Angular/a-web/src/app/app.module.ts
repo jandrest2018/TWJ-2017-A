@@ -14,7 +14,6 @@ import { TerrainComponent } from './Componentes/terrain/terrain.component';
 import { PopulationComponent } from './Componentes/population/population.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +24,7 @@ import { PopulationComponent } from './Componentes/population/population.compone
     ClimateComponent,
     GravityComponent,
     TerrainComponent,
-    PopulationComponent,
+    PopulationComponent
   ],
   imports: [
     BrowserModule,
