@@ -1,89 +1,99 @@
 <div class="container">
   <h1 class="display-2">Bienvenidos</h1>
-  <a title="Star Wars" href=""><img src="https://s-media-cache-ak0.pinimg.com/originals/60/42/41/604241472eebf494087523e2339a10a9.gif" alt="" /></a>
-</div>
-<div class="row">
-  <div style="align-content: center" class="col-md-6">
-    <br>
-    <button (click)="cargarPlanetas()" class="btn btn-success">Planetas de Star Wars</button>
+  <h2>Usuarios Conectados</h2>
+  <div class="row">
+  <div  *ngFor="let usuario of arregloUsr">
+    <div class="col-sm-4" *ngIf="usuario.conectado">
+    <div class="card" style="width: 20rem">
+      <div class="card-block">
+        <h4 class="card-title">{{usuario.nombre}}-{{usuario.conectado}}</h4>
+        <p class="card-text">{{usuario.nombre}} {{usuario.apellido}}</p>
+        <a href="#" class="btn btn-primary btn-block">Revisar Perfil</a>
+      </div>
+    </div>
   </div>
 </div>
-<div class="card">
-  <ul>
-    <li *ngFor="let planet of planetas" >{{planet.name}}</li>
-  </ul>
+</div>
 </div>
 <div class="container">
-  <div class="card-block">
-      <div class="row">
-          <div class="col-sm-4" *ngFor="let planet of planetas; let i= index">
-            <app-planeta-star-wars [planeta]="planet" ></app-planeta-star-wars>
-          </div>
-        </div>
-  </div>
-</div>
-
-<div class="container">
-  <h2>BIENVENIDOS CREAR USUARIO</h2>
-  <br>
-  <h2>Usuarios</h2>
-
   <div class="row">
     <div class="col-sm-6">
       <div class="form-group">
-          <pre>
-            {{nuevoUsuario | json }}
-          </pre>
-        <label class="col-form-label">
-          Nombre Usuario:
-        </label>
-        <input class="form-control"
-               placeholder="Ingrese nuevo nombre"
-               [(ngModel)]="nuevoUsuario.nombre" type="text">
+        <pre>{{nuevoUsuario | json}}</pre>
+        <label class="col-form-label">Nombre Usuario</label>
+        <input type="text" class="form-control" placeholder="nombre de usuario" [(ngModel)]="nuevoUsuario.nombre">
+        <button class="btn btn-info" (click)="crearUsuario()">CREAR</button>
+        <button class="btn btn-info" (click)="actualizarUsuario()">ACTUALIZAR LISTA</button>
       </div>
-      <button class="btn btn-primary" (click)="crearUsuario()">Crear un Usuario</button>
-      <button class="btn btn-primary" (click)="actualizarUsuario()">Actualizar Listado Usuarios</button>
-    </div>
-  </div>
-  <br>
-  <h3>Usuarios:</h3>
-
-  <div class="row">
-    <div class="col-sm-3" *ngFor="let usuario of usuarios;let i = index;">
-      <h3>{{usuario.nombre}}</h3>
-      <p class="card-text">{{usuario.nombre}} </p>
-      <button class="btn btn-danger" (click)="eliminarUsuario(usuario.id, i)"> Eliminar un Usuario</button>
     </div>
   </div>
 </div>
 
+<div class="container">
+  <h1 class="display-2">Bienvenidos</h1>
+  <h2>Usuarios Conectados</h2>
+  <div class="row">
+    <div  *ngFor="let usuario of usuarios; let i= index">
+      <div class="col-sm-4">
+        <div class="card" style="width: 20rem">
+          <div class="card-block">
+            <p class="card-text">{{usuario.nombre}} {{usuario.id}}</p>
+            <a href="#" class="btn btn-primary btn-block" (click)="eliminarUsuario(usuario.id)">Eliminar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<div class="row">
+  <div style="align-content: center" class="col-md-6">
+    <h2>Peliculas</h2>
+    <br>
+    <button (click)="cargarBatman()" class="btn-group-lg">Peliculas de Batman</button>
+  </div>
+</div>
+<div class="row">
+  <ul>
+    <li *ngFor="let pelis of peliculas" >{{pelis.original_title}}</li>
+  </ul>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let pelis of peliculas; let i= index">
+      <app-pelicula-batman [pelicula]="pelis" ></app-pelicula-batman>
+    </div>
+  </div>
+</div>
 <!--<div class="container">
-  <div class="planet
-nameor="let pelisplanetasulas">
-  <div cnameol-sm-4">
+  <div class="row">
+  <div *ngFor="let pelis of peliculas">
+  <div class="col-sm-4">
     <div class="card card-inverse text-center">
 
-      &lt;!&ndasplaplanete &ndagravity  <img class="card-img-top" style="max-height: 70%; max-width:created [src]="'https://imaplanetplanetg/t/p/w1terrainster_path" alt="Photo of sunset">
+      &lt;!&ndash; Image &ndash;&gt;
+      <img class="card-img-top" style="max-height: 70%; max-width: 90%" [src]="'https://image.tmdb.org/t/p/w1280/'+pelis.poster_path" alt="Photo of sunset">
 
       &lt;!&ndash; Text Overlay &ndash;&gt;
-      planetclass=planet-block">residentslass="table table-inverse table-bordered">
+      <div class="card-block">
+        <table class="table table-inverse table-bordered">
           <tbody>
-          <planet           <tplanetease date:</td>
+          <tr>
+            <td>Release date:</td>
             <td>{{pelis.release_date}}</td>
           </tr>
-       planetr>
-      planet <td>Original title:</td>
+          <tr>
+            <td>Original title:</td>
             <td>{{pelis.original_title}}</td>
           </tr>
           <tr>
-planet      clplanetginal Language:</td>
+            <td>Original Language:</td>
             <td>{{pelis.original_language}}</td>
           </tr>
           <tr>
             <td>Popularity:</td>
-            <td>{{pelis.poplanetity}}</tplanet    films
+            <td>{{pelis.popularity}}</td>
+          </tr>
           <tr>
             <td>Vote count:</td>
             <td>{{pelis.vote_count}}</td>

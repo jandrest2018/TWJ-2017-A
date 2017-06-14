@@ -1,44 +1,42 @@
-import {Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
-import 'rxjs/add/operator/map'
-import {PlanetaSWInterface} from "../../Interfaces/PlanetaSWInterface";
+import 'rxjs/add/operator/map';
+import {PlanetaSWInterface} from "../Interface/StarWars";
 import {UsuarioClass} from "../../Clases/UsuarioClass";
 
-@Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
-})
+@Component(
+  {
+    selector: 'app-inicio',
+    templateUrl: './inicio.component.html',
+    styleUrls: ['./inicio.component.css']
+  })
 export class InicioComponent implements OnInit {
-
-  nombre: string = "nombresito";
+  nombre: string = "Evelyn";
   usuarios: UsuarioClass[] = [];
   nuevoUsuario: UsuarioClass = new UsuarioClass("");
 
   planetas: any[] = [];
 
-  arregloUsr=[{
-    nombre:"nombrecito1",
-    apellido:"apellidito1",
+  arregloUsuarios = [{
+    nombre: "Eveeee",
+    apellido: "Regalado",
     conectado: true
   },
     {
-      nombre:"nombrecito2",
-      apellido:"apellidito2",
+      nombre: "Brenda",
+      apellido: "Ximena",
+      conectado: true
+    },
+    {
+      nombre: "Michel",
+      apellido: "Blabla",
       conectado: false
     },
     {
-      nombre:"nombrecito3",
-      apellido:"apellidito3",
+      nombre: "Stefania",
+      apellido: "flores",
       conectado: true
     }];
-  cambiarNombre(){
-    this.nombre="otro nombresito";
-  }
-
-  otroNombre():void{
-    this.nombre="un nombre de foco";
-  }
 
   constructor(private _http: Http) {
   }
@@ -59,11 +57,19 @@ export class InicioComponent implements OnInit {
       )
   }
 
+  cambiarNombre(): void {
+    this.nombre = "Brenda";
+  }
 
-  cambiarInput(nombreEtiqueta){
-    console.log(nombreEtiqueta.type);
+  CambiarOtroNombre() {
+    this.nombre = "Eve";
+  }
+
+  CambiarNombreInput(nombreEtiqueta) {
     console.log(nombreEtiqueta.value);
-    this.nombre= nombreEtiqueta.value;
+    console.log(nombreEtiqueta.type);
+    console.log(nombreEtiqueta.placeholder);
+    this.nombre = nombreEtiqueta.value;
   }
 
   cargarPlanetas() {
@@ -74,12 +80,12 @@ export class InicioComponent implements OnInit {
         (reponse) => {
           console.log('Response: ', reponse);
           console.log(reponse.json());
-          let repuesta:any = reponse.json();
+          let repuesta: any = reponse.json();
           console.log(repuesta.next);
           this.planetas = reponse.json().results;
           this.planetas = this.planetas.map(
-            (planeta)=>{
-              planeta.imagenURL = "/assets/imagenesStarWars" + planeta.name+'.jpg';
+            (planeta) => {
+              planeta.imagenURL = "/assets/imagenesStarWars" + planeta.name + '.jpg';
               return planeta;
             }
           )
@@ -100,8 +106,8 @@ export class InicioComponent implements OnInit {
   crearUsuario() {
     console.log("Creo usuario");
     /*let usuario= {
-     nombre: this.nuevoUsuario.nombre
-     }*/
+      nombre: this.nuevoUsuario.nombre
+    }*/
     this._http.post('http://localhost:1337/Usuario', this.nuevoUsuario)
       .subscribe(
         respuesta => {
@@ -137,4 +143,7 @@ export class InicioComponent implements OnInit {
     });
   }
 }
+
+
+
 
