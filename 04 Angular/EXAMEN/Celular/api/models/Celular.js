@@ -7,10 +7,21 @@
 
 module.exports = {
 
+  connection: 'conexionMysqlDocker',//localDiskDb
   attributes: {
 
+    nombre:{
+      type:'string'
+    },
 
+    sistemaOperativo:{
+      type:'string'
+    },
 
+    version:{
+      type:'integer'
+    }
   }
+
 };
 
