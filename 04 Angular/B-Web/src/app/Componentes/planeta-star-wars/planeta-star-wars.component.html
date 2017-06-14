@@ -1,0 +1,15 @@
+
+  <div>
+    <h1>{{planeta.name}}</h1>
+    <p>Horas del dia: <strong>{{planeta.rotation_period}}</strong></p>
+     <app-climate [climate]="planeta.climate"></app-climate>
+    <app-diameter [diameter]="planeta.diameter"></app-diameter>
+    <app-gravity [gravity]="planeta.gravity"></app-gravity>
+    <app-terrain [terrain]="planeta.terrain"></app-terrain>
+    <app-orbital-period [orbital_period]="planeta.orbital_period"></app-orbital-period>
+</div>
+
+<!--
+  <app-diameter-p-sw [planeta.diameter]="diameter">
+  </app-diameter-p-sw>
+  -->

@@ -1,0 +1,10 @@
+<div class="card">
+  <app-votos-pelicula [votos]="pelicula.vote_count"></app-votos-pelicula>
+  <app-poster-pelicula [poster]="pelicula.poster_path"></app-poster-pelicula>
+  <div class="card-block">
+    <app-titulo-pelicula [titulo]="pelicula.title"></app-titulo-pelicula>
+    <app-descripcion-pelicula [descripcion]="pelicula.overview"></app-descripcion-pelicula>
+  </div>
+  <app-popularidad-pelicula [popularidad]="pelicula.popularity"></app-popularidad-pelicula>
+</div>
+

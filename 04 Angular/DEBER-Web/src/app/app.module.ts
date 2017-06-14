@@ -8,13 +8,23 @@ import {HttpModule} from "@angular/http";
 import { EstiloComponent } from './estilo/estilo.component';
 import { InicioComponent } from './Componentes/inicio/inicio.component';
 import { planetaStarWars } from './Componentes/planeta-star-wars/planeta-star-wars.component';
+import { ClimateComponent } from './Componentes/climate/climate.component';
+import { DiameterComponent } from './Componentes/diameter/diameter.component';
+import { GravityComponent } from './Componentes/gravity/gravity.component';
+import { TerrainComponent } from './Componentes/terrain/terrain.component';
+import { PopulationComponent } from './Componentes/population/population.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EstiloComponent,
     InicioComponent,
-    planetaStarWars
+    planetaStarWars,
+    ClimateComponent,
+    DiameterComponent,
+    GravityComponent,
+    TerrainComponent,
+    PopulationComponent
   ],
   imports: [
     BrowserModule,
