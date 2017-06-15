@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { planetaStarWars } from './planeta-star-wars.component';
+import { peopleStarWars } from './people-star-wars.component';
 
 describe('peopleStarWars', () => {
-  let component: planetaStarWars;
-  let fixture: ComponentFixture<planetaStarWars>;
+  let component: peopleStarWars;
+  let fixture: ComponentFixture<peopleStarWars>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ planetaStarWars ]
+      declarations: [ peopleStarWars ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(planetaStarWars);
+    fixture = TestBed.createComponent(peopleStarWars);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

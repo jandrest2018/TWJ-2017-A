@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CelularInterface} from "../../Interface/Celular";
 import {Http} from "@angular/http";
+import {CelularClass} from "../../Clases/CelularClass";
 
 @Component({
   selector: 'app-inicio',
