@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {CelularInterface} from "../../Interface/celular";
+import {Component, Input, OnInit} from '@angular/core';
+import {CelularInterface} from "../../Interface/Celular";
 
 @Component({
   selector: 'app-celular',

@@ -6,3 +6,4 @@ export interface CelularInterface{
   createdAt?: Date;
   updatedAt?: Date;
 }
+
