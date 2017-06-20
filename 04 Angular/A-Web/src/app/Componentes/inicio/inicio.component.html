@@ -47,9 +47,9 @@
 
   <div class="row">
     <div class="col-sm-4"
-         *ngFor="let planeta of personas;let i = index;">
+         *ngFor="let planeta of planetas;let i = index;">
 
-      <app-planeta-star-wars [persona]="planeta">
+      <app-planeta-star-wars [planeta]="planeta">
 
       </app-planeta-star-wars>
 
@@ -59,11 +59,13 @@
 
 <!--
 
-persona>Usuarios Conectados</h2>
+
+
+  <h2>Usuarios Conectados</h2>
 
   <div class="row">
 
-    <div *ngFor="let usuapersonaarregloUsuarios">
+    <div *ngFor="let usuario of arregloUsuarios">
       <div class="col-sm-4" *ngIf="usuario.conectado">
         <div class="card" style="width: 20rem;">
           <div class="card-block">
@@ -81,9 +83,9 @@ persona>Usuarios Conectados</h2>
   <br>
 
  <div>
-    <ul *ngFor="let planetapersonasetas; let indice = index">
+    <ul *ngFor="let planeta of planetas; let indice = index">
 
-        <li>{{indice}} personaneta.name}}
+        <li>{{indice}} - {{planeta.name}}
           <img [src]="planeta.imagenURL" alt=""></li>
 
       <ul>
