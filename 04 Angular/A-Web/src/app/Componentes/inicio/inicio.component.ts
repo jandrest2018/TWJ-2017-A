@@ -1,6 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
+
+
+
 import 'rxjs/add/operator/map';
+
+
+
+
 import {PlanetaStarWarsInterface} from "../../Interfaces/PlanetaStarWars";
 import {UsuarioClass} from "../../Classes/UsuarioClass";
 
@@ -58,7 +65,22 @@ export class InicioComponent implements OnInit {
         respuesta=>{
           let rjson:UsuarioClass[] = respuesta.json();
 
-          this.usuarios = rjson;
+          this.usuarios = rjson.map(
+            (usuario:UsuarioClass)=>{
+              //cambiar el usuario
+              usuario.editar = false;
+              return usuario;
+            }
+          );
+
+          /*
+           //anadir propiedades a objetos
+           let objeto1:any = {
+           prop1:1,
+           prop2:2
+           }
+           objeto1.prop3 = 3;
+           */
 
           console.log("Usuarios: ",this.usuarios);
         },
@@ -139,16 +161,18 @@ export class InicioComponent implements OnInit {
   crearUsuario(){
     console.log("Entro a crear Usuario");
     /*
-    let usuario = {
-      nombre:this.nuevoUsuario.nombre
-    };
-    */
+     let usuario = {
+     nombre:this.nuevoUsuario.nombre
+     };
+     */
 
     this._http
       .post("http://localhost:1337/Usuario",this.nuevoUsuario)
       .subscribe(
         respuesta=>{
-          let respuestaJson = respuesta.json();
+          let respuestaJson = respuesta.json()
+          this.usuarios.push(respuestaJson);
+          this.nuevoUsuario = new UsuarioClass();
           console.log('respuestaJson: ',respuestaJson);
         },
         error=>{
@@ -160,27 +184,44 @@ export class InicioComponent implements OnInit {
 
   eliminarUsuario(usuario:UsuarioClass,indice:number){
 
-    console.log("Indice:",this.usuarios.indexOf(usuario));
+    this._http.delete("http://localhost:1337/Usuario/"+usuario.id)
+      .subscribe(
+        respuesta=>{
+          this.usuarios.splice(this.usuarios.indexOf(usuario),1)
+        },
+        error=>{
+          console.log("Error",error);
+        }
+      )
 
-    console.log("Indice con index: ",indice);
+  }
 
+  actualizarUsuario(usuario:UsuarioClass){
+
+    let actualizacion = {
+      nombre:usuario.nombre
+    };
+
+    this._http.put(
+      "http://localhost:1337/Usuario/"+usuario.id,actualizacion)
+      .map(
+        (res)=>{
+          return res.json();
+        })
+      // snippet -> template de codigo para reutilizarlo
+      .subscribe(
+        res=>{
+          //el servidor nos dice que se actualizo
+          console.log("El usuario se actualizo",res);
+        },
+        err=>{
+          //hubo algun problema (Red servidor)
+          console.log("Hubo un error",err);
+        }
+
+
+      );
 
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
