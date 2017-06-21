@@ -50,4 +50,3 @@ interface UsuarioInt{
   nombre:string,
   apellido:string
 }
-
