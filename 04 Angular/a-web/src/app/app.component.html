@@ -9,7 +9,7 @@
     <a [routerLink]="['inicio']">Inicio</a>
   </li>
   <li>
-    <a [routerLink]="['pagina2']">Pagina2</a>
+    <a [routerLink]="['pagina2',66,'pagina3',1283]">Pagina2</a>
   </li>
 </ul>
 
@@ -18,44 +18,22 @@
 <h3>Footer</h3>
 
 <!-- no usar : <a href="{{url}}">
-
 <router-outlet></router-outlet>
-
-
 <h1>Mi primer aplicacion en Angular</h1>
-
-
 <h2>Property Binding</h2>
-
 <h3>Primera forma con llaves dobles </h3>
 <p>{{parrafo}}</p>
 <h3>Segunda forma con []</h3>
-
 <p [style.color]="'white'"
    [style.background-color]="background"
    [innerText]="parrafo"></p>
-
 <input type="text" [value]="parrafo">
-
 <app-estilo></app-estilo>
-
 <app-estilo></app-estilo>
-
 <app-estilo></app-estilo>
-
 <app-estilo></app-estilo>
-
-
-
-
 <p>Mantiene sincronizadas las variables
 del componente en el html</p>
-
-
-
-
-
-
 <br>
 <br>
 <br>
@@ -71,22 +49,15 @@ del componente en el html</p>
 <br>
 SI HACER ESTO
 <p>Gracias por visitarnos {{usuario.nobre}} {{usuario.apellido}}</p>
-
 NO HACER ESTO
 <h3>Desarrollado por
-
   {{
   saludar(usuario.nombre,usuario.apellido)}}
-
 </h3>
-
 NO HACER ESTO
 <h3>{{usuario.nombre +" " + usuario.apellido}}
 </h3>
-
-
 <a [href]="url">
   <img [src]="src" alt="Logo Angular">
 </a>
-
 -->

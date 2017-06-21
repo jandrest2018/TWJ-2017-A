@@ -19,19 +19,19 @@ export const routes: Routes = [
     component:InicioComponent
   },
   {
-    path:"pagina2",
+    path:"pagina2/:idPagina2/pagina3/:idPagina3",
     component:Pagina2Component,
     children:[
       {
-        path:"pagina21",
+        path:"pagina21/:idPartes",
         component:Pagina21Component
       },
       {
-        path:"pagina22",
+        path:"pagina22/:idCompetencias",
         component:Pagina22Component
       },
       {
-        path:"pagina23",
+        path:"pagina23/:idDuenos",
         component:Pagina23Component
       }
     ]
@@ -40,19 +40,18 @@ export const routes: Routes = [
 
 
 /*
-
-  [
-  {path: '', redirectTo: 'inicio', pathMatch: 'full'},
-  {path:'inicio', component: InicioComponent},
-  {path:'pagina2', component: InicioComponent,
-    children: [
-      { path: '', redirectTo: 'overview', pathMatch: 'full' },
-      //{ path: 'pagina3', component: Pagina3Component },
-      //{ path: 'pagina4', component: Pagina4Component }
-    ]
-  }
-];
-*/
+ [
+ {path: '', redirectTo: 'inicio', pathMatch: 'full'},
+ {path:'inicio', component: InicioComponent},
+ {path:'pagina2', component: InicioComponent,
+ children: [
+ { path: '', redirectTo: 'overview', pathMatch: 'full' },
+ //{ path: 'pagina3', component: Pagina3Component },
+ //{ path: 'pagina4', component: Pagina4Component }
+ ]
+ }
+ ];
+ */
 
 export const ModuloDeRutas: ModuleWithProviders =
   RouterModule.forRoot(routes);
@@ -63,39 +62,21 @@ export const ModuloDeRutas: ModuleWithProviders =
 
 
 /*
-
-
-/inicio
-InicioComponent
-
-/pagina2
-Pagina2Component
-   /Pagina21
-   /Pagina22
-   /Pagina23
-
----------------------------
-
-/pagina2
-Pagina2Component
-
-todos los autos
-
-
-/idAuto
-Mostrar Auto
-
-/partes
-
-
-
-/dueños
-
-/competencias
-
-
-
----------------------------
-
-
+ /inicio
+ InicioComponent
+ /pagina2
+ Pagina2Component
+ /Pagina21
+ /Pagina22
+ /Pagina23
+ ---------------------------
+ /pagina2
+ Pagina2Component
+ todos los autos
+ /idAuto
+ Mostrar Auto
+ /partes
+ /dueños
+ /competencias
+ ---------------------------
  */
