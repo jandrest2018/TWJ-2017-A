@@ -1,4 +1,5 @@
 
+
 <div class="container">
 
   <h1>Bienvenidos</h1>
@@ -30,7 +31,11 @@
     <div class="col-sm-6" *ngFor="let usuario of usuarios;let indice = index;">
       <div class="margin-usuarios">
 
-        <app-usuario [usuarioLocal]="usuario"></app-usuario>
+        <app-usuario
+          [usuarioLocal]="usuario"
+          (usuarioborrado)="eliminarUsuario($event)"
+
+        ></app-usuario>
 
 
 
