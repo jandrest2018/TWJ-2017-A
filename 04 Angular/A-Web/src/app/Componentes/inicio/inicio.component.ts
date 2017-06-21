@@ -74,11 +74,13 @@ export class InicioComponent implements OnInit {
           );
 
           /*
-           //anadir propiedades a objetos
+          //anadir propiedades a objetos
+
            let objeto1:any = {
            prop1:1,
            prop2:2
            }
+
            objeto1.prop3 = 3;
            */
 
@@ -161,10 +163,10 @@ export class InicioComponent implements OnInit {
   crearUsuario(){
     console.log("Entro a crear Usuario");
     /*
-     let usuario = {
-     nombre:this.nuevoUsuario.nombre
-     };
-     */
+    let usuario = {
+      nombre:this.nuevoUsuario.nombre
+    };
+    */
 
     this._http
       .post("http://localhost:1337/Usuario",this.nuevoUsuario)
@@ -182,16 +184,33 @@ export class InicioComponent implements OnInit {
 
   }
 
-  //este metodo se ejecuta con un evento del componente hijo (usuarioBorrado) ="eliminarUsuario()"
+  // este metodo se ejecuta con un evento del componente hijo
 
-  eliminarUsuario(usuario:UsuarioClass){
+  //  (usuarioBorrado)="eliminarUsuario($event)"
+
+  eliminarUsuarioFrontEnd(usuario:UsuarioClass){
 
     let indice = this.usuarios.indexOf(usuario);
 
-    //Eliminando el arreglo
+    // Eliminando del arreglo
 
     this.usuarios.splice(indice,1);
 
   }
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

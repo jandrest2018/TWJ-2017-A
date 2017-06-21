@@ -40,18 +40,19 @@ export const routes: Routes = [
 
 
 /*
- [
- {path: '', redirectTo: 'inicio', pathMatch: 'full'},
- {path:'inicio', component: InicioComponent},
- {path:'pagina2', component: InicioComponent,
- children: [
- { path: '', redirectTo: 'overview', pathMatch: 'full' },
- //{ path: 'pagina3', component: Pagina3Component },
- //{ path: 'pagina4', component: Pagina4Component }
- ]
- }
- ];
- */
+
+  [
+  {path: '', redirectTo: 'inicio', pathMatch: 'full'},
+  {path:'inicio', component: InicioComponent},
+  {path:'pagina2', component: InicioComponent,
+    children: [
+      { path: '', redirectTo: 'overview', pathMatch: 'full' },
+      //{ path: 'pagina3', component: Pagina3Component },
+      //{ path: 'pagina4', component: Pagina4Component }
+    ]
+  }
+];
+*/
 
 export const ModuloDeRutas: ModuleWithProviders =
   RouterModule.forRoot(routes);
@@ -62,21 +63,39 @@ export const ModuloDeRutas: ModuleWithProviders =
 
 
 /*
- /inicio
- InicioComponent
- /pagina2
- Pagina2Component
- /Pagina21
- /Pagina22
- /Pagina23
- ---------------------------
- /pagina2
- Pagina2Component
- todos los autos
- /idAuto
- Mostrar Auto
- /partes
- /dueños
- /competencias
- ---------------------------
+
+
+/inicio
+InicioComponent
+
+/pagina2
+Pagina2Component
+   /Pagina21
+   /Pagina22
+   /Pagina23
+
+---------------------------
+
+/pagina2
+Pagina2Component
+
+todos los autos
+
+
+/idAuto
+Mostrar Auto
+
+/partes
+
+
+
+/dueños
+
+/competencias
+
+
+
+---------------------------
+
+
  */
