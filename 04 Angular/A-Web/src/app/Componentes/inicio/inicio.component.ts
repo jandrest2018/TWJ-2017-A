@@ -10,6 +10,7 @@ import 'rxjs/add/operator/map';
 
 import {PlanetaStarWarsInterface} from "../../Interfaces/PlanetaStarWars";
 import {UsuarioClass} from "../../Classes/UsuarioClass";
+import {Form} from "@angular/forms";
 
 @Component({
   selector: 'app-inicio',
@@ -74,13 +75,11 @@ export class InicioComponent implements OnInit {
           );
 
           /*
-          //anadir propiedades a objetos
-
+           //anadir propiedades a objetos
            let objeto1:any = {
            prop1:1,
            prop2:2
            }
-
            objeto1.prop3 = 3;
            */
 
@@ -160,28 +159,34 @@ export class InicioComponent implements OnInit {
       )
   }
 
-  crearUsuario(){
+  crearUsuario(UsuarioFormulario){
+
     console.log("Entro a crear Usuario");
+
+    console.log(UsuarioFormulario)
+
+    console.log(this.nuevoUsuario);
+
     /*
-    let usuario = {
-      nombre:this.nuevoUsuario.nombre
-    };
-    */
-
-    this._http
-      .post("http://localhost:1337/Usuario",this.nuevoUsuario)
-      .subscribe(
-        respuesta=>{
-          let respuestaJson = respuesta.json()
-          this.usuarios.push(respuestaJson);
-          this.nuevoUsuario = new UsuarioClass();
-          console.log('respuestaJson: ',respuestaJson);
-        },
-        error=>{
-          console.log("Error",error);
-        }
-      )
-
+     let usuario = {
+     nombre:this.nuevoUsuario.nombre
+     };
+     */
+    /*
+     this._http
+     .post("http://localhost:1337/Usuario",this.nuevoUsuario)
+     .subscribe(
+     respuesta=>{
+     let respuestaJson = respuesta.json()
+     this.usuarios.push(respuestaJson);
+     this.nuevoUsuario = new UsuarioClass();
+     console.log('respuestaJson: ',respuestaJson);
+     },
+     error=>{
+     console.log("Error",error);
+     }
+     )
+     */
   }
 
   // este metodo se ejecuta con un evento del componente hijo
@@ -200,17 +205,3 @@ export class InicioComponent implements OnInit {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
