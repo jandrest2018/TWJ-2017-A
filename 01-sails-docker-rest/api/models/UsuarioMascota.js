@@ -5,22 +5,22 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
-//DueñosDeMascotas
+//DuenosDeMascota
+
 module.exports = {
 
   attributes: {
     idUsuario:{
-      model:"Usuario"//Tabla Papá
+      model:"Usuario"//Tabla papa
     },
     idMascota:{
-      model:"Mascota"//Tabla papá
+      model:"Mascota"//Tabla papa
     },
     fechaDeInicioAdopcion:{
       type:"date"
     },
-    fechaFinalizacionAdopcion:{
+    fechaDeFinalizacionAdopcion:{
       type:"date"
     }
   }
 };
-

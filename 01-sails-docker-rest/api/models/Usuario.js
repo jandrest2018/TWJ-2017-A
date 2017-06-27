@@ -12,10 +12,11 @@ module.exports = {
     nombre:{
       type:'string'
     },
-    dueñosMascotas:{
+    duenosMascotas:{
       collection:"UsuarioMascota",
       via:"idUsuario"
     }
+
   }
 
 };

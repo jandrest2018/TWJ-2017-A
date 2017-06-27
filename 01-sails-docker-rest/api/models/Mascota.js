@@ -9,15 +9,15 @@ module.exports = {
 
   attributes: {
     nombre:{
-      type: "string"
+      type:"string"
     },
     idRaza:{
-      model:"Raza" //Modelo a Relacionar (Papá)
+      model:"Raza"//Modelo a Relacionar (Papa)
     },
-    dueñosMascotas:{
-      collection:"UsuarioMascota",
-      via:"idMascota"
+    duenosMascotas:{
+      collection:"UsuarioMascota",//Modelo
+      via:"idMascota"//Foreign Key
     }
+
   }
 };
-
