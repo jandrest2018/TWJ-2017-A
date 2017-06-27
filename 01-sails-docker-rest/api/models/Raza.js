@@ -10,6 +10,10 @@ module.exports = {
   attributes: {
     nombre:{
       type: "string"
+    },
+    listaMascotasDeRaza:{
+      collection:'Mascota', //Es el nombre del MODELO a relacionar (hijo)
+      via:'idRaza' //Es el nombre del Foreing Key
     }
   }
 };
