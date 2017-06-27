@@ -13,6 +13,10 @@ module.exports = {
     },
     idRaza:{
       model:"Raza" //Modelo a Relacionar (Papá)
+    },
+    dueñosMascotas:{
+      collection:"UsuarioMascota",
+      via:"idMascota"
     }
   }
 };
