@@ -68,7 +68,7 @@ export class InicioComponent implements OnInit {
 
   cargarPlanetas() {
     this._http
-      .get('http://swapi.co/api/planets')
+      .get('http://swapi.co/api/people')
       // .map(response => response.json())
       .subscribe(
         (reponse) => {

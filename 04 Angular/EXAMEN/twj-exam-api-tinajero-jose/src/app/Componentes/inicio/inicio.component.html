@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="display-2">Bienvenidos</h1>
+  <a title="People Star Wars" href=""><img src="http://3.bp.blogspot.com/-kZ3zN_QGTLw/T8T5HGFUEuI/AAAAAAAAB-k/9D2mlVCDUWg/s1600/Very-Important-Pixels-Star+Wars+Rebels.jpg" alt="" /></a>
+</div>
+<div class="row">
+  <div style="align-content: center" class="col-md-6">
+    <br>
+    <button (click)="cargarPlanetas()" class="btn btn-success">Personajes de Star Wars</button>
+  </div>
+</div>
+<div class="card">
+  <ul>
+    <li *ngFor="let planet of personas" >{{planet.name}}</li>
+  </ul>
+</div>
+<div class="container">
+  <div class="card-block">
+      <div class="row">
+          <div class="col-sm-4" *ngFor="let planet of personas; let i= index">
+            <app-planeta-star-wars [persona]="planet" ></app-planeta-star-wars>
+          </div>
+        </div>
+  </div>
+</div>

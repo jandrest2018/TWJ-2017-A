@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DiameterComponent } from './diameter.component';
+import { peopleStarWars } from './people-star-wars.component';
 
-describe('DiameterComponent', () => {
-  let component: DiameterComponent;
-  let fixture: ComponentFixture<DiameterComponent>;
+describe('peopleStarWars', () => {
+  let component: peopleStarWars;
+  let fixture: ComponentFixture<peopleStarWars>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DiameterComponent ]
+      declarations: [ peopleStarWars ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DiameterComponent);
+    fixture = TestBed.createComponent(peopleStarWars);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

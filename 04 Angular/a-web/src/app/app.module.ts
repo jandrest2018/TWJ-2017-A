@@ -7,11 +7,15 @@ import {NgModule} from "@angular/core";
 import { EstiloComponent } from './estilo/estilo.component';
 import {InicioComponent} from "./Componentes/inicio/inicio.component";
 import { PlanetaStarWarsComponent } from './Componentes/planeta-star-wars/planeta-star-wars.component';
-import { DiameterComponent } from './Componentes/diameter/diameter.component';
-import { ClimateComponent } from './Componentes/climate/climate.component';
-import { GravityComponent } from './Componentes/gravity/gravity.component';
-import { TerrainComponent } from './Componentes/terrain/terrain.component';
-import { PopulationComponent } from './Componentes/population/population.component';
+import { UsuarioComponent } from './Componentes/usuario/usuario.component';
+
+
+import {ModuloDeRutas} from "./routes";
+
+import { Pagina2Component } from './Componentes/pagina2/pagina2.component';
+import { Pagina21Component } from './Componentes/pagina21/pagina21.component';
+import { Pagina22Component } from './Componentes/pagina22/pagina22.component';
+import { Pagina23Component } from './Componentes/pagina23/pagina23.component';
 
 
 @NgModule({
@@ -20,21 +24,22 @@ import { PopulationComponent } from './Componentes/population/population.compone
     EstiloComponent,
     InicioComponent,
     PlanetaStarWarsComponent,
-    DiameterComponent,
-    ClimateComponent,
-    GravityComponent,
-    TerrainComponent,
-    PopulationComponent
+    UsuarioComponent,
+    Pagina2Component,
+    Pagina21Component,
+    Pagina22Component,
+    Pagina23Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ModuloDeRutas
   ],
   providers: [
     // http
   ],
-  bootstrap: [InicioComponent]
+  bootstrap: [AppComponent]
 })
 
 
