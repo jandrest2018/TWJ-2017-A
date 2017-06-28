@@ -1,4 +1,3 @@
-
 <div class="container">
 
   <h1>Bienvenidos</h1>
@@ -17,21 +16,57 @@
           <label class="col-form-label">Nombre Usuario:
           </label>
           <input class="form-control"
+
                  required
-                 placeholder="Ingrese nuevo Nombre" name="nombre" type="text"
+                 minlength="3"
+                 maxlength="15"
+
+                 placeholder="Ingrese nuevo Nombre" name="nombre" type="email"
+                 pattern="[A-Za-z]{3}"
 
                  [(ngModel)]="nuevoUsuario.nombre"
-
                  #nombre="ngModel"
-
                  #nombreTAG
+          >
+          <br>
+          <label class="col-form-label">Correo Electronico:
+          </label>
+          <input class="form-control"
 
+                 required
+                 minlength="3"
+                 maxlength="25"
+
+                 placeholder="Ingrese Correo Electronico" name="correoElectronico" type="email"
+                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
+
+                 [(ngModel)]="nuevoUsuario.correoElectronico"
+                 #nombre="ngModel"
+                 #nombreTAG
           >
 
+
+
+          <div *ngIf="nombre.errors?.minlength&&nombre.touched==true" class="alert alert-warning animated bounceIn" role="alert">
+            <strong>¡Cuidado!</strong> Debes de llenar el campo desde 3 hasta 25 caracteres.
+          </div>
+
+          <div
+            *ngIf="nombre.errors?.required&&nombre.touched==true"
+
+            class="alert alert-danger animated bounceIn" role="alert">
+            <strong>¡Peligro!</strong> Este campo es requerido.
+          </div>
+
           <pre>
+            Errores:
             {{nombre.errors | json}}
+            Touched:
             {{nombre.touched}}
+            Dirty:
             {{nombre.dirty}}
+            Pristine:
+            {{nombre.pristine}}
           </pre>
         </div>
 
