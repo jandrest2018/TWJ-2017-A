@@ -9,6 +9,7 @@ export class UsuarioClass {
               public id?:number,
               public createdAt?:Date,
               public updatedAt?:Date,
+              public correoElectronico?:string,
               public editar?:boolean){
   }
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script language="JavaScript">
+  var now = new Date();
+
+  var days = new Array('Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado');
+
+  var months = new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+
+  var date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
+
+  function fourdigits(number)	{
+    return (number < 1000) ? number + 1900 : number;
+  }
+  today =  days[now.getDay()] + ", " +
+    months[now.getMonth()] + " " +
+    date + ", " +
+    (fourdigits(now.getYear())) ;
+
+  document.write(today);
+</script>
+
+</html>
