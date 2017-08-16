@@ -85,7 +85,7 @@ export class InicioComponent implements OnInit {
           this.planetas = reponse.json().results;
           this.planetas = this.planetas.map(
             (planeta) => {
-              planeta.imagenURL = "/assets/imagenesStarWars" + planeta.name + '.jpg';
+              planeta.image = "/assets/imagenesStarWars" + planeta.name + '.jpg';
               return planeta;
             }
           )

@@ -29,7 +29,7 @@ export class InicioComponent implements OnInit {
           this.personas = reponse.json().results;
           this.personas = this.personas.map(
             (persona)=>{
-              persona.imagenURL = "/assets/imagenesStarWars" + persona.name+'.jpg';
+              persona.image = "/assets/imagenesStarWars" + persona.name+'.jpg';
               return persona;
             }
           )
